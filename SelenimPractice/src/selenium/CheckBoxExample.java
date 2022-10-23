@@ -13,15 +13,15 @@ public class CheckBoxExample {
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://testleaf.herokuapp.com/pages/checkbox.html");
 		
-WebElement javaBox=	driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[1]/input[1]"));
+WebElement javaBox=	driver.findElement(By.xpath("//*[contains(text(),'languages')]/following::input[1]"));
 javaBox.click();
 
-WebElement selenium=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[2]"));
+WebElement selenium=driver.findElement(By.xpath("//*[contains(text(),'Confirm')]/following::input[1]"));
 boolean seleniumSelected=selenium.isSelected();
 System.out.println(seleniumSelected);
 
-WebElement notSelected=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[3]/input[1]"));
-WebElement isSelected=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[3]/input[2]"));
+WebElement notSelected=driver.findElement(By.xpath("//*[contains(text(),'DeSelect')]/following::input[1]"));
+WebElement isSelected=driver.findElement(By.xpath("//*[contains(text(),'DeSelect')]/following::input[2]"));
 
 if (notSelected.isSelected()) {
 	notSelected.click();
@@ -29,17 +29,17 @@ if (notSelected.isSelected()) {
 isSelected.click();
 }
 
-WebElement option1=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[1]"));
+WebElement option1=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[1]"));
 option1.click();
-WebElement option2=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[2]"));
+WebElement option2=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[2]"));
 option2.click();
-WebElement option3=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[3]"));
+WebElement option3=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[3]"));
 option3.click();
-WebElement option4=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[4]"));
+WebElement option4=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[4]"));
 option4.click();
-WebElement option5=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[5]"));
+WebElement option5=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[5]"));
 option5.click();
-WebElement option6=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[4]/input[6]"));
+WebElement option6=driver.findElement(By.xpath("//label[contains(text(),'below')]/following::input[6]"));
 option6.click();
 
 	}
