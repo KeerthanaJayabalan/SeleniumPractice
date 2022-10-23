@@ -18,12 +18,12 @@ public class Image {
 		
 		
 		
-		WebElement firstImg=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[1]/div/div/img"));
+		WebElement firstImg=driver.findElement(By.xpath("//*[contains(@src, 'home')]"));
 		firstImg.click();
 		
 		driver.navigate().back();
 		
-		WebElement secImg=driver.findElement(By.xpath("//*[@id=\'contentblock\']/section/div[2]/div/div/img"));
+		WebElement secImg=driver.findElement(By.xpath("//*//*[contains(@src, 'abcd')]"));
 		//"naturalWidth=0"
 		
 		if (secImg.getAttribute("naturalWidth").equals("0")) {
